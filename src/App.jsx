@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
+import MobileNav from "./components/MobileNav/MobileNav";
 import Home from "./components/Home";
 import Services from "./components/Services/Services";
 import Works from "./components/Works/Works";
@@ -19,6 +20,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <MobileNav />
       </div>
     </Router>
   );
