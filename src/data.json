@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Interior Designing",
+    "description": "Creative and functional interior solutions tailored to your style and needs.",
+    "icon": "interior-designing"
+  },
+  {
+    "title": "Structural Home Designs",
+    "description": "Robust and innovative home designs ensuring safety and longevity.",
+    "icon": "structural-home-designs"
+  },
+  {
+    "title": "Land Surveying",
+    "description": "Accurate land measurement and analysis for your construction projects.",
+    "icon": "land-surveying"
+  },
+  {
+    "title": "Draftsmanship",
+    "description": "Professional drafting services for precise architectural plans.",
+    "icon": "draftsmanship"
+  }
+]

@@ -1,0 +1,69 @@
+/* Theme colors and styles to be used across the application */
+:root {
+  --color-primary: #dc2626;
+  --color-primary-dark: #991b1b;
+  --color-primary-light: #fee2e2;
+  --color-primary-bg: #fff1f2;
+  --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  --gradient-bg: linear-gradient(135deg, var(--color-primary-light), var(--color-primary-bg));
+}
+
+/* Common background pattern with icons */
+.bg-pattern {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-pattern::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--gradient-bg);
+  z-index: 0;
+}
+
+.bg-icons {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0.07;
+}
+
+.floating-icon {
+  position: absolute;
+  color: var(--color-primary-dark);
+  opacity: 0.15;
+  animation: floatIcon 20s infinite ease-in-out;
+}
+
+@keyframes floatIcon {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(10px, -10px) rotate(5deg); }
+  50% { transform: translate(0, 15px) rotate(-5deg); }
+  75% { transform: translate(-10px, -5px) rotate(3deg); }
+}
+
+/* Common card styles */
+.card {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Common section styles */
+.section {
+  padding: 4rem 2rem;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 1rem;
+  }
+}
