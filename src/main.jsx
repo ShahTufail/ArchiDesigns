@@ -9,7 +9,7 @@ createRoot(document.getElementById('root')).render(
   <BrowserRouter basename="/ArchiDesigns">
     <StrictMode>
       <App />
-    </StrictMode>,
+    </StrictMode>
   </BrowserRouter>
 
 )
