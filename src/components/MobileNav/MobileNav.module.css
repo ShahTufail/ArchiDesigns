@@ -1,0 +1,46 @@
+.mobile-bottom-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  padding: 0.75rem;
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+}
+
+.mobile-social-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.mobile-social-link {
+  color: #dc2626;
+  transition: all 0.3s ease;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-social-link:hover {
+  color: white;
+  background: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(220, 38, 38, 0.2);
+}
+
+@media (max-width: 768px) {
+  .mobile-bottom-bar {
+    display: block;
+  }
+  
+  /* Add padding to main content to prevent overlap with bottom bar */
+  body {
+    padding-bottom: 4rem;
+  }
+}
