@@ -1,13 +1,12 @@
 import React from "react";
 import { Contact as me, MapPin, Phone, Mail, Clock } from "lucide-react";
-import styles from "./Contact.module.css";
 
 const ContactInfo = ({ icon: Icon, title, content }) => (
-  <div className={styles["info-group"]}>
-    <Icon className={styles["info-icon"]} size={24} />
-    <div className={styles["info-content"]}>
-      <h3>{title}</h3>
-      <p>{content}</p>
+  <div className="flex items-start gap-4 mb-6">
+    <Icon className="text-rose-400 bg-rose-50 rounded-full p-2 shadow" size={28} />
+    <div>
+      <h3 className="font-bold text-rose-700">{title}</h3>
+      <p className="text-gray-600">{content}</p>
     </div>
   </div>
 );
@@ -30,81 +29,72 @@ const Contact = () => {
   };
 
   return (
-    <div className={styles["contact-container"]}>
-      <h2 className={styles["contact-title"]}>Get in Touch</h2>
-      <p className={styles["contact-description"]}>
+    <div className="max-w-5xl mx-auto px-4 py-16">
+      <h2 className="text-3xl md:text-4xl font-bold text-center text-rose-700 mb-6">Get in Touch</h2>
+      <p className="text-lg text-rose-500 mb-10 text-center max-w-2xl mx-auto">
         Have a project in mind? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
       </p>
-      
-      <div className={styles["contact-content"]}>
-        <div className={styles["contact-form"]}>
-          <form onSubmit={handleSubmit}>
-            <div className={styles["form-group"]}>
-              <label className={styles["form-label"]} htmlFor="name">Name</label>
+      <div className="flex flex-col md:flex-row gap-12">
+        <div className="bg-white rounded-2xl shadow-xl p-8 flex-1 mb-8 md:mb-0">
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div>
+              <label className="block text-rose-700 font-semibold mb-2" htmlFor="name">Name</label>
               <input
                 type="text"
                 id="name"
                 name="name"
-                className={styles["form-input"]}
+                className="w-full px-4 py-2 border border-rose-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-400"
                 placeholder="Your name"
                 required
               />
             </div>
-            
-            <div className={styles["form-group"]}>
-              <label className={styles["form-label"]} htmlFor="email">Email</label>
+            <div>
+              <label className="block text-rose-700 font-semibold mb-2" htmlFor="email">Email</label>
               <input
                 type="email"
                 id="email"
                 name="email"
-                className={styles["form-input"]}
+                className="w-full px-4 py-2 border border-rose-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-400"
                 placeholder="your.email@example.com"
                 required
               />
             </div>
-            
-            <div className={styles["form-group"]}>
-              <label className={styles["form-label"]} htmlFor="message">Message</label>
+            <div>
+              <label className="block text-rose-700 font-semibold mb-2" htmlFor="message">Message</label>
               <textarea
                 id="message"
                 name="message"
-                className={styles["form-textarea"]}
+                className="w-full px-4 py-2 border border-rose-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose-400 min-h-[120px]"
                 placeholder="Tell us about your project"
                 required
               ></textarea>
             </div>
-            
-            <button type="submit" className={styles["submit-button"]}>
+            <button type="submit" className="w-full bg-rose-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-rose-700 focus:ring-2 focus:ring-rose-400 transition">
               Send Message
             </button>
           </form>
         </div>
-        
-        <div className={styles["contact-info"]}>
+        <div className="flex-1">
           <ContactInfo
             icon={me}
             title="Er. Tabish Geelani"
             content="Principal Architect & Founder"
           />
-
           <ContactInfo
             icon={MapPin}
             title="Office Address"
             content="1000, Street 97, Nowpora, Munawarabad, Srinagar, Jammu & Kashmir, 190018"
           />
-          
           <ContactInfo
             icon={Phone}
             title="Phone"
             content="+91 9018381436  | +91 9797290692"
           />
-          
           <ContactInfo
             icon={Mail}
             title="Email"
             content="support@archidesigns.co.in | asminfratech24@gmail.com"
           />
-          
           <ContactInfo
             icon={Clock}
             title="Working Hours"

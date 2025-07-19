@@ -1,4 +1,8 @@
-/* Base Reset & Typography */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: Keep only resets and scrollbar styles */
 html {
   scrollbar-gutter: stable;
   overflow-y: scroll;
@@ -7,105 +11,13 @@ html {
 ::-webkit-scrollbar {
   width: 8px;
 }
-
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
-
 ::-webkit-scrollbar-thumb {
   background: #dc2626;
   border-radius: 4px;
 }
-
 ::-webkit-scrollbar-thumb:hover {
   background: #b91c1c;
-}
-
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to bottom right, #f9fafb, #e5e7eb);
-  color: #1f2937;
-}
-
-/* Navigation Bar */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  position: sticky;
-  top: 0;
-  z-index: 50;
-}
-
-nav .logo {
-  font-weight: bold;
-  font-size: 1.25rem;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 1rem;
-  padding: 0;
-  margin: 0;
-}
-
-nav a {
-  text-decoration: none;
-  color: #1f2937;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #2563eb;
-}
-
-nav .social-icons {
-  display: flex;
-  gap: 0.5rem;
-}
-
-/* Home Page */
-.home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  text-align: center;
-  padding: 1rem;
-  position: relative;
-}
-
-.home svg {
-  width: 12rem;
-  height: 12rem;
-  opacity: 0.1;
-  position: absolute;
-  top: 5rem;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.home h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  z-index: 1;
-}
-
-.home p {
-  font-size: 1.125rem;
-  max-width: 40rem;
-  color: #4b5563;
-  z-index: 1;
-}
-
-/* Generic Page Styling */
-.page {
-  padding: 1rem;
 }
