@@ -24,7 +24,7 @@ const NavBar = () => {
     <nav className={`fixed top-0 left-0 w-full z-40 bg-white/80 backdrop-blur border-b border-rose-100 transition-shadow ${isScrolled ? "shadow-lg" : ""}`}>
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-2">
         <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="ArchiDesigns Logo" className="h-12 w-auto rounded-lg shadow" />
+          <img src={logo} alt="ArchiDesigns Logo" className="h-14 w-auto rounded-md shadow" />
         </Link>
         <button
           className="md:hidden p-2 rounded-full bg-rose-50 text-rose-600 hover:bg-rose-100 transition"
