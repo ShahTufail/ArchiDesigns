@@ -11,7 +11,7 @@ import NotFound from "./components/NotFound";
 function App() {
   return (
     <Router basename="/ArchiDesigns">
-      <div className="relative">
+      <div className="relative bg-gradient-to-br from-rose-50 via-white to-rose-100">
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />

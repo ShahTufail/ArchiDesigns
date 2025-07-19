@@ -53,8 +53,8 @@ const Module = ({ name, role, bio, Icon }) => (
 );
 
 const Home = () => (
-  <div className="relative min-h-screen bg-gradient-to-br from-rose-50 via-white to-rose-100">
-    <section className="relative flex flex-col items-center justify-center min-h-[100vh] py-16 overflow-hidden" style={{ margin: 0 }}>
+  <div className="relative min-h-screen max-w-7xl mx-auto px-4 py-16">
+    <section className="relative flex flex-col items-center justify-center min-h-[70vh] py-16 overflow-hidden">
       <BackgroundIcons />
       <HomeIcon
         className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-rose-100 z-0"
@@ -73,20 +73,18 @@ const Home = () => (
         </p>
         <Link
           to="/contact"
-          className="inline-block bg-rose-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-rose-700 focus:ring-2 focus:ring-rose-400 focus:outline-none transition"
+          className="inline-block bg-rose-600 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-rose-700 focus:ring-2 focus:ring-rose-400 focus:outline-none transition"
         >
           Start Your Project
         </Link>
       </div>
     </section>
 
-    <div className="w-full h-0" style={{ pageBreakAfter: "always" }} />
-
     <section className="py-12">
       <Portfolio />
     </section>
 
-    <section className="py-16 bg-rose-50">
+    <section className="py-16 bg-rose-50 p-6">
       <h2 className="text-3xl md:text-4xl font-bold text-center text-rose-700 mb-10">
         Visualize your dream home
       </h2>

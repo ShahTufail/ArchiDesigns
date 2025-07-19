@@ -38,11 +38,23 @@ const NavBar = () => {
             <Menu size={28} />
           )}
         </button>
-        <ul className={`hidden md:flex items-center gap-8`}>
-          <li><Link to="/" className="text-rose-700 font-semibold hover:text-rose-900 transition">Home</Link></li>
-          <li><Link to="/services" className="text-rose-700 font-semibold hover:text-rose-900 transition">Services</Link></li>
-          <li><Link to="/works" className="text-rose-700 font-semibold hover:text-rose-900 transition">Gallery</Link></li>
-          <li><Link to="/contact" className="text-rose-700 font-semibold hover:text-rose-900 transition">Contact</Link></li>
+        <ul className="hidden md:flex items-center gap-8">
+        {[
+            { to: "/", label: "Home" },
+            { to: "/services", label: "Services" },
+            { to: "/works", label: "Gallery" },
+            { to: "/contact", label: "Contact" }
+        ].map(({ to, label }) => (
+            <li key={label}>
+            <Link
+                to={to}
+                className="group relative text-[18px] text-rose-700 font-semibold transition-all duration-300 ease-out hover:text-rose-900"
+            >
+                {label}
+                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-rose-700 transition-all duration-300 ease-out group-hover:w-full"></span>
+            </Link>
+            </li>
+        ))}
         </ul>
         <div className="hidden md:flex items-center gap-4">
           <a href="https://www.facebook.com/ArchiDesignskashmir/" target="_blank" rel="noopener noreferrer"
