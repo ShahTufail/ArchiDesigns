@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Facebook, Instagram, Linkedin, Menu, X } from "lucide-react";
 import styles from "./NavBar.module.css";
+import logo from "../../assets/logo_w.jpg";
+
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,11 +25,14 @@ const NavBar = () => {
 
 return (
     <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''}`}>
-        <div className={styles.brand}>
+        <Link to="/" className={styles.logoLink}>
+            <img src={logo} alt="ArchiDesigns Logo" className={styles.logo} />
+        </Link>
+        {/* <div className={styles.brand}>
             <Link to="/" className={styles["home-button"]}>
                 ArchiDesigns<sup style={{fontSize:'1rem'}}>KMR</sup>
             </Link>
-        </div>
+        </div> */}
         
         <button 
             className={styles["menu-button"]}

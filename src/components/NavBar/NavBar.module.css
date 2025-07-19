@@ -7,14 +7,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.25rem 2rem;
+  padding: .25rem 2rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   transition: padding 0.3s ease;
 }
 
 .navbar.scrolled {
-  padding: 0.75rem 2rem;
+  /* padding: 0.25rem .7rem; */
   background-color: rgba(255, 255, 255, 0.98);
+}
+.logoLink {
+  /* width: 48px; */
+  /* height: 48px; */
+  .logo {
+    height: 64px;
+    width: auto;
+}
 }
 
 .brand {

@@ -164,3 +164,10 @@
     padding: 4rem 1rem;
   }
 }
+.hero-section {
+  position: relative;
+}
+
+.hero-bg-icon {
+  pointer-events: none;
+}

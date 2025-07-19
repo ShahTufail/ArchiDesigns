@@ -90,19 +90,19 @@ const Contact = () => {
           <ContactInfo
             icon={MapPin}
             title="Office Address"
-            content="Room 314 Hotel Bahar Khayam near khyber Hospital., Srinagar, India, Jammu and Kashmir"
+            content="1000, Street 97, Nowpora, Munawarabad, Srinagar, Jammu & Kashmir, 190018"
           />
           
           <ContactInfo
             icon={Phone}
             title="Phone"
-            content="+91 9018381436 | +91 9018293948"
+            content="+91 9018381436  | +91 9797290692"
           />
           
           <ContactInfo
             icon={Mail}
             title="Email"
-            content="support@archidesigns.co.in"
+            content="support@archidesigns.co.in | asminfratech24@gmail.com"
           />
           
           <ContactInfo

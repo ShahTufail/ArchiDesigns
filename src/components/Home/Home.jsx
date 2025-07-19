@@ -60,6 +60,19 @@ const Home = () => (
   <div className={styles["home-container"]}>
     <section className={styles["hero-section"]}>
       <BackgroundIcons />
+      <HomeIcon
+        className={styles["hero-bg-icon"]}
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          opacity: 0.08,
+          zIndex: 0,
+          width: "800px",
+          height: "900px",
+        }}
+      />
 
       <div className={styles.content}>
         <h1 className={styles.title}>Building Dreams with Precision</h1>
