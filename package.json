@@ -10,7 +10,9 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "add-cname": "echo archidesigns.co.in > dist/CNAME",
+    "deploy": "npm run build && npm run add-cname && gh-pages -d dist"
+
   },
   "dependencies": {
     "lucide-react": "^0.525.0",

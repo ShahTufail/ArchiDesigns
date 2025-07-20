@@ -12,7 +12,7 @@ const ServiceCard = ({ icon: Icon, title, description, variant }) => (
 
 const Services = () => (
   <div className={styles["services-container"]}>
-    <h2 className={styles["services-title"]}>Our Services</h2>
+    <h2 className={styles["services-title"]} >Our Services</h2>
     <p className={styles["services-description"]}>
       We provide comprehensive architectural and engineering solutions, blending innovation with precision to create spaces that inspire and endure.
     </p>

@@ -30,7 +30,7 @@ const Contact = () => {
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-16">
-      <h2 className="text-3xl md:text-4xl font-bold text-center text-rose-700 mb-6">Get in Touch</h2>
+      <h2 className="text-3xl md:text-4xl font-bold text-center text-rose-700 mb-6 mt-10">Get in Touch</h2>
       <p className="text-lg text-rose-500 mb-10 text-center max-w-2xl mx-auto">
         Have a project in mind? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
       </p>
