@@ -10,7 +10,7 @@ import NotFound from "./components/NotFound";
 
 function App() {
   return (
-    <Router basename="/ArchiDesigns">
+    <Router basename="/">
       <div className="relative bg-gradient-to-br from-rose-50 via-white to-rose-100">
         <NavBar />
         <Routes>
