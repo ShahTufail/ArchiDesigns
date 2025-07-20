@@ -25,13 +25,13 @@ const Portfolio = () => {
       <section>
         <h2 className="text-2xl md:text-3xl font-bold text-rose-700 mb-4">Highlighted Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-white rounded-xl shadow-lg p-6 hover:scale-105 hover:shadow-2xl transition-all duration-300">
+          <div className="bg-white/90 backdrop-blur-sm rounded-xl shadow-lg p-6 hover:scale-[1.03] hover:shadow-rose-200 transition-all duration-300">
             <h3 className="text-lg font-bold text-rose-700 mb-2">Hilltop Eco Villas</h3>
-            <p className="text-gray-600">Led the structural design and site execution for a sustainable residential complex in hilly terrain.</p>
+            <p className="text-gray-700 group-hover:text-gray-800 transition-colors">Led the structural design and site execution for a sustainable residential complex in hilly terrain.</p>
           </div>
-          <div className="bg-white rounded-xl shadow-lg p-6 hover:scale-105 hover:shadow-2xl transition-all duration-300">
+          <div className="bg-white/90 backdrop-blur-sm rounded-xl shadow-lg p-6 hover:scale-[1.03] hover:shadow-rose-200 transition-all duration-300">
             <h3 className="text-lg font-bold text-rose-700 mb-2">Smart Bridge Retrofit</h3>
-            <p className="text-gray-600">Managed a retrofitting project involving traffic optimization and seismic resilience upgrades.</p>
+            <p className="text-gray-700 group-hover:text-gray-800 transition-colors">Managed a retrofitting project involving traffic optimization and seismic resilience upgrades.</p>
           </div>
         </div>
       </section>

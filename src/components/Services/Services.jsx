@@ -1,6 +1,8 @@
 import React from "react";
 import { Building2, Ruler, HardHat, PenTool } from "lucide-react";
 import styles from "./Services.module.css";
+import BgLogo from "../BackgroundLogo"
+
 
 const ServiceCard = ({ icon: Icon, title, description, variant }) => (
   <div className={`${styles["service-card"]} ${styles[`service-card-${variant}`]}`}>
@@ -12,6 +14,7 @@ const ServiceCard = ({ icon: Icon, title, description, variant }) => (
 
 const Services = () => (
   <div className={styles["services-container"]}>
+    <BgLogo />
     <h2 className={styles["services-title"]} >Our Services</h2>
     <p className={styles["services-description"]}>
       We provide comprehensive architectural and engineering solutions, blending innovation with precision to create spaces that inspire and endure.

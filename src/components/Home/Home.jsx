@@ -1,61 +1,41 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import BgLogo from "../BackgroundLogo"
 import {
   Home as HomeIcon,
   Building,
   Coffee,
   Award,
-  Ruler,
-  HardHat,
-  Compass,
-  PencilRuler,
-  Grid,
-  Landmark,
 } from "lucide-react";
 import Portfolio from "../Portfolio";
 
 // Red theme color: use shades like rose, red, or custom via Tailwind config
 
-const BackgroundIcons = () => (
-  <div className="absolute inset-0 pointer-events-none z-0">
-    {[
-      { Icon: HomeIcon, style: { top: '10%', left: '30%', animationDelay: '0s' } },
-      { Icon: Building, style: { top: '20%', right: '15%', animationDelay: '-2s' } },
-      { Icon: Ruler, style: { bottom: '25%', left: '20%', animationDelay: '-4s' } },
-      { Icon: HardHat, style: { top: '40%', left: '80%', animationDelay: '-6s' } },
-      { Icon: Compass, style: { bottom: '45%', right: '35%', animationDelay: '-8s' } },
-      { Icon: PencilRuler, style: { top: '60%', left: '15%', animationDelay: '-10s' } },
-      { Icon: Grid, style: { bottom: '30%', right: '10%', animationDelay: '-14s' } },
-      { Icon: Landmark, style: { top: '75%', left: '40%', animationDelay: '-16s' } },
-    ].map(({ Icon, style }, index) => (
-      <Icon
-        key={index}
-        className="absolute text-rose-200 animate-pulse transition-transform duration-500"
-        style={{
-          ...style,
-          width: Math.random() * 40 + 50 + 'px',
-          height: Math.random() * 40 + 50 + 'px',
-        }}
-      />
-    ))}
-  </div>
+const BackgroundIcon = () => (
+  <div className="absolute inset-0 flex justify-center items-center z-0 pointer-events-none">
+  <img
+    src={logo}
+    alt="Background Logo"
+    className="w-[300px] md:w-[500px] opacity-10 object-contain animate-fade-in"
+  />
+</div>
 );
 
 const Module = ({ name, role, bio, Icon }) => (
-  <div className="bg-white rounded-2xl shadow-xl p-6 flex flex-col items-center gap-3 border border-rose-100 hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer group">
+  <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 flex flex-col items-center gap-3 border border-white/30 hover:scale-[1.04] hover:shadow-rose-200 transition-all duration-300 cursor-pointer group">
     <div className="mb-2">
-      <Icon size={64} className="text-rose-400 opacity-40 group-hover:opacity-80 transition" />
+      <Icon size={64} className="text-rose-400 opacity-30 group-hover:opacity-80 transition duration-300 ease-in-out" />
     </div>
-    <h3 className="text-lg font-bold text-rose-700 group-hover:text-rose-900 transition">{name}</h3>
-    <div className="text-sm font-semibold text-rose-500 mb-1 group-hover:text-rose-600 transition">{role}</div>
-    <p className="text-gray-600 text-center group-hover:text-gray-800 transition">{bio}</p>
+    <h3 className="text-lg font-bold text-rose-700 group-hover:text-rose-900 transition duration-300 ease-in-out">{name}</h3>
+    <div className="text-sm font-semibold text-rose-500 mb-1 group-hover:text-rose-600 transition duration-300 ease-in-out">{role}</div>
+    <p className="text-gray-700 text-center group-hover:text-gray-900 transition duration-300 ease-in-out">{bio}</p>
   </div>
 );
 
 const Home = () => (
   <div className="relative min-h-screen max-w-7xl mx-auto px-4 py-16">
     <section className="relative flex flex-col items-center justify-center min-h-[70vh] py-16 overflow-hidden">
-      <BackgroundIcons />
+      <BgLogo />
       <HomeIcon
         className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-rose-100 z-0"
         style={{

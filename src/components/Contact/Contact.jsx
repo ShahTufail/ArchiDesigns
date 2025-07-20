@@ -1,5 +1,6 @@
 import React from "react";
 import { Contact as me, MapPin, Phone, Mail, Clock } from "lucide-react";
+import BgLogo from "../BackgroundLogo";
 
 const ContactInfo = ({ icon: Icon, title, content }) => (
   <div className="flex items-start gap-4 mb-6">
@@ -30,12 +31,13 @@ const Contact = () => {
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-16">
+      <BgLogo />
       <h2 className="text-3xl md:text-4xl font-bold text-center text-rose-700 mb-6 mt-10">Get in Touch</h2>
       <p className="text-lg text-rose-500 mb-10 text-center max-w-2xl mx-auto">
         Have a project in mind? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
       </p>
       <div className="flex flex-col md:flex-row gap-12">
-        <div className="bg-white rounded-2xl shadow-xl p-8 flex-1 mb-8 md:mb-0">
+        <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-8 flex-1 mb-8 md:mb-0 border border-white/30">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label className="block text-rose-700 font-semibold mb-2" htmlFor="name">Name</label>
@@ -74,7 +76,8 @@ const Contact = () => {
             </button>
           </form>
         </div>
-        <div className="flex-1">
+        <div className="flex-1 bg-white/80 backdrop-blur-sm rounded-2xl border border-white/30 p-6 shadow-md">
+
           <ContactInfo
             icon={me}
             title="Er. Tabish Geelani"
