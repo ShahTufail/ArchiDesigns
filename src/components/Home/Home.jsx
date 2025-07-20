@@ -9,18 +9,6 @@ import {
 } from "lucide-react";
 import Portfolio from "../Portfolio";
 
-// Red theme color: use shades like rose, red, or custom via Tailwind config
-
-const BackgroundIcon = () => (
-  <div className="absolute inset-0 flex justify-center items-center z-0 pointer-events-none">
-  <img
-    src={logo}
-    alt="Background Logo"
-    className="w-[300px] md:w-[500px] opacity-10 object-contain animate-fade-in"
-  />
-</div>
-);
-
 const Module = ({ name, role, bio, Icon }) => (
   <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-6 flex flex-col items-center gap-3 border border-white/30 hover:scale-[1.04] hover:shadow-rose-200 transition-all duration-300 cursor-pointer group">
     <div className="mb-2">
