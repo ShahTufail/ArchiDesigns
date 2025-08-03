@@ -7,6 +7,12 @@ const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  
+  const facebookUrl = import.meta.env.VITE_REACT_APP_FACEBOOK_URL;
+  const instagramUrl = import.meta.env.VITE_REACT_APP_INSTAGRAM_URL;
+  const linkedinUrl = import.meta.env.VITE_REACT_APP_LINKEDIN_URL;
+  const emailAddress = import.meta.env.VITE_REACT_APP_EMAIL_ADDRESS;
+  const phoneNumber = import.meta.env.VITE_REACT_APP_PHONE_NUMBER;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,15 +63,15 @@ const NavBar = () => {
         ))}
         </ul>
         <div className="hidden md:flex items-center gap-4">
-          <a href="https://www.facebook.com/ArchiDesignskashmir/" target="_blank" rel="noopener noreferrer"
+          <a href={facebookUrl} target="_blank" rel="noopener noreferrer"
             className="text-rose-400 hover:text-rose-600 transition-colors duration-200 p-2 rounded-full bg-white shadow hover:scale-110 active:scale-95">
             <Facebook size={24} />
           </a>
-          <a href="https://www.instagram.com/archidesigns_kashmir/" target="_blank" rel="noopener noreferrer"
+          <a href={instagramUrl} target="_blank" rel="noopener noreferrer"
             className="text-rose-400 hover:text-rose-600 transition-colors duration-200 p-2 rounded-full bg-white shadow hover:scale-110 active:scale-95">
             <Instagram size={24} />
           </a>
-          <a href="https://www.linkedin.com/in/designer-tabish-geelani-5608bb1a4/" target="_blank" rel="noopener noreferrer"
+          <a href={linkedinUrl} target="_blank" rel="noopener noreferrer"
             className="text-rose-400 hover:text-rose-600 transition-colors duration-200 p-2 rounded-full bg-white shadow hover:scale-110 active:scale-95">
             <Linkedin size={24} />
           </a>
@@ -78,15 +84,15 @@ const NavBar = () => {
         <li><Link to="/works" className="text-rose-700 font-semibold hover:text-rose-900 transition">Gallery</Link></li>
         <li><Link to="/contact" className="text-rose-700 font-semibold hover:text-rose-900 transition">Contact</Link></li>
         <div className="flex items-center gap-4 mt-2">
-          <a href="https://www.facebook.com/ArchiDesignskashmir/" target="_blank" rel="noopener noreferrer"
+          <a href={facebookUrl} target="_blank" rel="noopener noreferrer"
             className="text-rose-400 hover:text-rose-600 transition-colors duration-200 p-2 rounded-full bg-white shadow hover:scale-110 active:scale-95">
             <Facebook size={24} />
           </a>
-          <a href="https://www.instagram.com/archidesigns_kashmir/" target="_blank" rel="noopener noreferrer"
+          <a href={instagramUrl} target="_blank" rel="noopener noreferrer"
             className="text-rose-400 hover:text-rose-600 transition-colors duration-200 p-2 rounded-full bg-white shadow hover:scale-110 active:scale-95">
             <Instagram size={24} />
           </a>
-          <a href="https://www.linkedin.com/in/designer-tabish-geelani-5608bb1a4/" target="_blank" rel="noopener noreferrer"
+          <a href={linkedinUrl} target="_blank" rel="noopener noreferrer"
             className="text-rose-400 hover:text-rose-600 transition-colors duration-200 p-2 rounded-full bg-white shadow hover:scale-110 active:scale-95">
             <Linkedin size={24} />
           </a>
